@@ -45,6 +45,9 @@ public class Project_Kevin_Teah {
         System.out.printf("BMI of Policyholder: %.2f%n", policy.calculateBMI());
         System.out.printf("Policy Price: $%.2f%n", policy.calculatePolicyPrice());
 
+        System.out.println("\nNumber of Smokers: " + smokerCount); // Amount of smokers entered. (Added 6/12/25)
+        System.out.println("Number of Non-Smokers: " + nonSmokerCount // Amount of non-smokers added. (Added 6/12/25)
+        
         input.close();
     }
 }
