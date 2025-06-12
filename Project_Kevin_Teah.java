@@ -8,21 +8,21 @@ public class Project_Kevin_Teah {
         int policyNumber = input.nextInt();
         input.nextLine(); // consuming newline
 
-        System.out.print("Please enter the name of your  healthcare provider (Atrium Health, State Farm, etc): ");
-        String providerName = input.nextLine();
+        System.out.print("Please enter the name of your healthcare provider (Atrium Health, State Farm, etc): ");
+        String providerName = input.nextLine(); // A string that allows the user to input their healthcare provider. (Added 6/12/25)
 
         System.out.print("Please enter the Policyholder's First Name: ");
-        String firstName = input.nextLine();
+        String firstName = input.nextLine(); // String for the user to insert their first name. (Added 6/12/25)
 
         System.out.print("Please enter the Policyholder's Last Name: ");
-        String lastName = input.nextLine();
+        String lastName = input.nextLine(); // String for the user to insert their last name. (Added 6/12/25)
 
         System.out.print("Please enter the age of the Policyholder: ");
         int age = input.nextInt();
         input.nextLine(); // consuming newline
 
         System.out.print("Please enter the Smoking Status of the Policyholder(smoker/non-smoker): ");
-        String smokingStatus = input.nextLine();
+        String smokingStatus = input.nextLine(); // String that lets the user input information whether they're a smoker or nonsmoker. (Added 6/12/25)
 
         System.out.print("Please enter the height of the Policyholder (in inches, for ex: 70): ");
         double height = input.nextDouble();
