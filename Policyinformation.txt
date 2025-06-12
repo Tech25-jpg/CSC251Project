@@ -1,0 +1,35 @@
+# CSC251Project
+Repository for hosting the CSC251 Programming Project
+
+1001
+State Farm
+Alice
+Jones
+20
+smoker
+65.0
+110.0
+1002
+Atrium Health
+Bob
+Smith
+55
+non-smoker
+70.0
+180.0
+1003
+Blue Cross
+Cathy
+Williams
+48
+smoker
+62.5
+150.0
+1004
+Nationwide
+David
+Brown
+30
+non-smoker
+68.0
+175.0
