@@ -4,39 +4,51 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Project_Kevin_Teah {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+    public static void main(String[] args) throws FileNotFoundException {
+        File file = new File("PolicyInformation.txt");
+        Scanner fileScanner = new Scanner(file);
+        ArrayList<Policy> policies = new ArrayList<>();
 
-        System.out.print("Please enter your policy number (101, 2205191, etc.): ");
-        int policyNumber = input.nextInt();
-        input.nextLine(); // consuming newline
+        int smokerCount = 0;
+        int nonSmokerCount = 0;
 
-        System.out.print("Please enter the name of your healthcare provider (Atrium Health, State Farm, etc): ");
-        String providerName = input.nextLine(); // A string that allows the user to input their healthcare provider. (Added 6/12/25)
+        // Reading files on data and creating Policy objects (//Added 6/12/25)
+        while (fileScanner.hasNextLine()) {
+            int policyNumber = Integer.parseInt(fileScanner.nextLine());
+            String providerName = fileScanner.nextLine();
+            String firstName = fileScanner.nextLine();
+            String lastName = fileScanner.nextLine();
+            int age = Integer.parseInt(fileScanner.nextLine());
+            String smokerStatus = fileScanner.nextLine();
+            double height = Double.parseDouble(fileScanner.nextLine());
+            double weight = Double.parseDouble(fileScanner.nextLine());
 
-        System.out.print("Please enter the Policyholder's First Name: ");
-        String firstName = input.nextLine(); // String for the user to insert their first name. (Added 6/12/25)
+            Policy policy = new Policy(policyNumber, providerName, firstName, lastName, age, smokerStatus, height, weight);
+            policies.add(policy);
+             
+             if (policy.getSmokerStatus().equalsIgnoreCase("smoker")) {
+            smokerCount++;
+        } else {
+            nonSmokerCount++;
+            
+        }
+        
+    }
+    
+    if (fileInput.hasNextLine()) {
+        fileInput.nextLine(); // Skipping blank lines between entries. (Added 6/12/25)
+        
+        }
+        
+     }
+     
+     fileInput.close()
 
-        System.out.print("Please enter the Policyholder's Last Name: ");
-        String lastName = input.nextLine(); // String for the user to insert their last name. (Added 6/12/25)
+        }
+        
+        fileScanner.close();
 
-        System.out.print("Please enter the age of the Policyholder: ");
-        int age = input.nextInt();
-        input.nextLine(); // consuming newline
-
-        System.out.print("Please enter the Smoking Status of the Policyholder(smoker/non-smoker): ");
-        String smokingStatus = input.nextLine(); // String that lets the user input information whether they're a smoker or nonsmoker. (Added 6/12/25)
-
-        System.out.print("Please enter the height of the Policyholder (in inches, for ex: 70): ");
-        double height = input.nextDouble();
-
-        System.out.print("Please enter the weight of the Policyholder (in pounds, for ex: 180): ");
-        double weight = input.nextDouble();
-
-        // Create Policy object
-        Policy policy = new Policy(policyNumber, providerName, firstName, lastName, age, smokingStatus, height, weight);
-
-        // Output all information
+        // Output all information for each policyholder and count the number of smokers/non-smokers.
         System.out.println("\nPolicy Number: " + policy.getPolicyNumber());
         System.out.println("Provider Name: " + policy.getProviderName());
         System.out.println("Policyholder’s First Name: " + policy.getPolicyholderFirstName());
@@ -48,16 +60,8 @@ public class Project_Kevin_Teah {
         System.out.printf("BMI of Policyholder: %.2f%n", policy.calculateBMI());
         System.out.printf("Policy Price: $%.2f%n", policy.calculatePolicyPrice());
         
-        if (policy.getSmokerStatus().equalsIgnoreCase("smoker")) {
-            smokerCount++;
-        } else {
-            nonSmokerCount++;
-            
-        }
-        
-     }
          
-        //Display smoker statistics
+        //Display the smoker statistics collected (Added 6/12/25)
         System.out.println("\nNumber of Smokers: " + smokerCount); // Amount of smokers entered. (Added 6/12/25)
         System.out.println("Number of Non-Smokers: " + nonSmokerCount // Amount of non-smokers added. (Added 6/12/25)
         
