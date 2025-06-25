@@ -102,7 +102,7 @@ public class PolicyHolder {
 
     /**
      * Returns a string representation of the policyholder's info. The toString method.
-     */
+     Implemented code to implicitly call toString method and output information about Policy and PolicyHolders */
     public String toString() {
         return "Policyholder's First Name: " + firstName + "\n"
              + "Policyholder's Last Name: " + lastName + "\n"
