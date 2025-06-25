@@ -2,12 +2,14 @@
  * This policyholder class represents an individual who owns a policy of their own. (Added 6/25/25)
  */
 public class PolicyHolder {
-    private String firstName;
-    private String lastName;
-    private int age;
+    private int policyNumber;
+    private String providerName;
+    private String policyholderFirstName;
+    private String policyholderLastName;
+    private int policyholderAge;
     private String smokerStatus;
-    private double height;
-    private double weight;
+    private double height; // in inches
+    private double weight; // in pounds
 
     /**
      * Constructor defaulted. (6/25/25)
@@ -99,7 +101,7 @@ public class PolicyHolder {
     }
 
     /**
-     * Returns a string representation of the policyholder's info.
+     * Returns a string representation of the policyholder's info. The toString method.
      */
     public String toString() {
         return "Policyholder's First Name: " + firstName + "\n"
