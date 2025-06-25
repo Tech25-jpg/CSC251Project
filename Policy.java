@@ -84,7 +84,7 @@ private static int policyCount = 0; // The policycount keeps track of how many p
 
     /**
      * Returns a string representation of the policy, including holder info and price.
-     * @return string describing the policy, through the addition of "toString" method.
+     * @return string describing the policy, through the addition of "toString" method. Implemented code to implicitly call toString method and output information about both policy and their holders respectively.
      */
     @Override
     public String toString() {
